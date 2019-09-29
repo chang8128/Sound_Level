@@ -1,0 +1,2 @@
+Hello world, the test for redirect to test05_log.txt
+Hello world, the test for redirect to test05_log.txt
