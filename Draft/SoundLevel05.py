@@ -44,7 +44,6 @@ while True:
             break
 
 
-
 	# 将输入的音级数字，转换为List，并按照从小到大排列。
 	def linelist(inputnum):
 		"将键盘输入的数字行转换为从小到大排列的list"
