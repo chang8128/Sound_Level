@@ -1,6 +1,6 @@
 #coding=utf-8
 
-# 运行 python SoundLevel01.py level_input.txt 以计算音级
+# 运行 python SoundLevel04.py level_input.txt 以计算音级
 # 运行命令时输入的音级文本文件 level_input.txt 可以另起其他文件名。
 # 本程序仅仅实现了在输入的文本文件的行内对数字进行排序，且没有回写到这个打开的文件内。
 # 本程序实现了计算文本文件提供的多个音级的数字差。

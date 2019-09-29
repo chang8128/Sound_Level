@@ -1,9 +1,10 @@
 #coding=utf-8
 
-# 运行 python SoundLevel01.py level_input.txt 以计算音级
+# 运行 python SoundLevel.py level_input.txt 以计算音级
 # 运行命令时输入的音级文本文件 level_input.txt 可以另起其他文件名。
-# 仅实现了在输入的文本文件的行内对数字进行排序，且没有回写到这个打开的文件内。
-# 实现了计算文本文件提供的多个音级的数字差，并计算x次排序的音程。
+# 本程序仅仅实现了在输入的文本文件的行内对数字进行排序，且没有回写到这个打开的文件内。
+# 本程序实现了计算文本文件提供的一个音级序列的数字多个音程差。
+# 纠正了单个输入音程序列的排序计算。
 
 from sys import argv
 
@@ -24,7 +25,7 @@ Level_1 = raw_input("Sound Level 1: ")
 print "\nWe are goint to write these to the file Level.txt."
 print "输入完毕，现在写入并关闭文件。\n"
 
-# 向打开的文件中写入刚才输入的三行音级
+# 向打开的文件中写入刚才输入的一行音级
 target.write(Level_1)
 target.write("\n")
 
@@ -87,20 +88,27 @@ def list_shift1(shiftlist, k):
 
 print "\n"
 
+# 计算初始音级的 List 长度
+listnum = len(soundlist)
+
+# 创建一个从 1 开始，以 1 递增的列表，用以下列循环
+shiftnum = range(1,listnum)
+
 # 每次执行list_shift1，都会将原有音级的顺序向后推一个，所以执行次数为音级数；
 # 注意此时soundlist 每执行一次，原有顺序都会调整一格，所以不必要再调整 list_shift1函数的k值
-for number in soundlist:
+# 执行次数为上述定义的列表 shiftnum 的次数。
+for number in shiftnum:
     list_shift1(soundlist, 1)
 
-# 判断倒数第二个音～第一个音之间的音程
+    # 判断倒数第二个音～第一个音之间的音程
     if soundlist[len(soundlist)-2] >= soundlist[0]:
         temp2 = soundlist[len(soundlist) - 2] - soundlist[0]
     else:
         temp2 = soundlist[len(soundlist) - 2] +12 - soundlist[0]
 #    print temp2
     
-    print "第 x 次转换的排序：", soundlist, "音程为：", temp2, "\n"
-
+#    print "第 x 次转换的排序：", soundlist, "音程为：", temp2, "\n"
+    print "第 %r 次转换的排序：" %number, soundlist, "音程为：", temp2, "\n"
 
 
 """
