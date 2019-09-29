@@ -1,6 +1,0 @@
-fd = open("1.txt",'w+')  
-fd.write('123')  
-fd = open("1.txt",'r+')  
-fd.write('456')  
-fd = open("1.txt",'a+')  
-fd.write('789')  
