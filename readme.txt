@@ -1,6 +1,6 @@
 This is a sound level program designed for Cao Yongzhen.
 This program is write with Python language. 
-First program is finished at 2019-01-12.
+First program is finished at 2018-10-09.
 Local git and GitHub repository used with chang8128 username.
 
 
