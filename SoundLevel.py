@@ -7,8 +7,9 @@ import sys
 # 定义程序保存运行结果的文件名为 sound_level_calc.txt，每次程序运行的结果，会自动添加到文件末尾。
 # 程序开始后，输入end, exit, quit 退出执行。
 
-# 以下代码实现同时在屏幕打印输出，同时将程序输出结果保存到 sound_level.txt 文件中。
+# 以下代码实现同时在屏幕打印输出，同时将程序输出结果保存到 sound_level_calc.txt 文件中。
 # 避免了单纯调用 sys 模块的 stdout 将输出重定向到文件的弱点（屏幕无输出）。
+# 定义程序保存运行结果的文件名为 sound_level_calc.txt，每次程序运行的结果，会自动保存到文件末尾。
 
 class Logger(object):
     def __init__(self, fileN="Default.log"):
@@ -42,6 +43,7 @@ while True:
 
         elif level_1.strip() == 'quit':
             break
+
 
 
 	# 将输入的音级数字，转换为List，并按照从小到大排列。
